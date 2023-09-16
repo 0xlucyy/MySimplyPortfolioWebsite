@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer</title>
+    <link rel="icon" sizes="48x48" href="static/assets/favicon2.ico">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        section.content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project {
+            display: flex;
+            align-items: flex-start; /* Align items to the top */
+            margin-bottom: 15px;
+        }
+        .project img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .project div {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+        }
+        .project:nth-child(odd) {
+        background-color: #f4f4f4; /* Light gray for odd-numbered projects */
+        }
+        .project:nth-child(even) {
+            background-color: #e0e0e0; /* Slightly darker gray for even-numbered projects */
+        }
+        .project {
+            padding: 10px; /* Add some padding to make the background color more noticeable */
+            margin-bottom: 15px;
+            border-radius: 5px; /* Optional: Add rounded corners for a softer look */
+        }
+        .project img {
+            width: 150px; /* Increase the width */
+            height: 150px; /* Increase the height to maintain the aspect ratio */
+            margin-right: 20px; /* Increase the margin for better spacing */
+            border-radius: 5px; /* Optional: Add rounded corners to the image */
+        }
+
+        .project div {
+            flex: 1; /* This will make the text container take the remaining space after the image */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Luis Fernando</h1>
+        <p>Software Engineer</p>
+    </header>
+    <section class="content">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm Luis Fernando Escobar-Driver.
+            Im a passionate software engineer with years of
+            professional experience working with serverless
+            applications, web3 infrastructure, and full Stack
+            developement.
+        </p>
+        <p>
+            Interested in my detailed professional journey? Check out my <a href="static/assets/resume.pdf" target="_blank">Resume</a>.
+        </p>
+        <h2>Projects</h2>
+
+        <div class="project">
+            <img src="static/assets/hawk.png" alt="Project 1 Image">
+            <div>
+                <a href="https://github.com/0xlucyy/hawk" target="_blank">ENS Hawk</a>
+                <p>
+                    Full Stack application. Users can track Ethereum Name Service domains.
+                </p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="static/assets/provably_fair.png" alt="Project 2 Image">
+            <div>
+                <a href="https://github.com/0xlucyy/vrf" target="_blank">VRF</a>
+                <p>
+                    A Verifiable Random Function (VRF) that ensures
+                    the randomness and fairness of a game. The script contains
+                    functions to generate seeds, proofs, and random values, and to
+                    verify the outcome of a game.
+                </p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="static/assets/y2k.png" alt="Project 3 Image">
+            <div>
+                <a href="https://github.com/0xlucyy/y2k" target="_blank">Y2K Catastrophe Bonds</a>
+                <p>Cronjob Manager & a Cronjob which tracks Arbitrum Bonds, & sends text messages.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="static/assets/aws-architect.png" alt="Project 4 Image">
+            <div>
+                <a href="https://github.com/L-F-Escobar/MyAWSInfrastructure" target="_blank">AWS Infrastructure as code</a>
+                <p>AWS Infra project which deploys hundreds of lambdas using Severless Framework.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="static/assets/mysite.png" alt="Project 4 Image">
+            <div>
+                <a href="https://github.com/L-F-Escobar/MyWebsite" target="_blank">Deprecaited Portfolio Website</a>
+                <p>
+                    My portfolio website, built using React, Semantic-ui, Heroku, and Next.js. Website
+                    No longer live.
+                </p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="static/assets/html_site.png" alt="Project 5 Image">
+            <div>
+                <a href="https://github.com/L-F-Escobar/MyWebsite" target="_blank">Portfolio Website</a>
+                <p>
+                    Simple HTML file servering as my portfolio website.
+                </p>
+            </div>
+        </div>
+
+        <h2>Contact</h2>
+        <p>
+            Want to get in touch? Reach out on <a href="mailto:l.driver.escobar@gmail.com">Email</a> or <a href="https://www.linkedin.com/in/luis-escobar-driver-840985139/">LinkedIn</a>.
+        </p>
+    </section>
+</body>
+</html>
