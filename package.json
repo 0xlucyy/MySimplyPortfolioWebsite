@@ -1,0 +1,17 @@
+{
+  "name": "mysimplyportfoliowebsite",
+  "version": "1.0.0",
+  "description": "A simple html website used to display some of my work",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy --aws-profile S3_portfolio_website",
+    "PoS_sls": "aws s3 cp /Users/ancientevil/0x/MySimplyPortfolioWebsite/index.html s3://sls-s3-portfolio-website-lfed/ --profile S3_portfolio_website",
+    "PoS_sls_1": "aws s3 sync /Users/ancientevil/0x/MySimplyPortfolioWebsite/static s3://sls-s3-portfolio-website-lfed/static/ --profile S3_portfolio_website"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-s3-deploy": "^0.10.1"
+  }
+}

@@ -1,0 +1,47 @@
+service: sls-s3-portfolio-website-lfed
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+plugins:
+  - serverless-s3-deploy
+
+resources:
+  Resources:
+    WebsiteBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: sls-s3-portfolio-website-lfed
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: false
+          IgnorePublicAcls: false
+          BlockPublicPolicy: false
+          RestrictPublicBuckets: false
+        WebsiteConfiguration:
+          IndexDocument: index.html
+
+    BucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: WebsiteBucket
+        PolicyDocument:
+          Statement:
+            - Sid: PublicReadGetObject
+              Effect: Allow
+              Principal: "*"
+              Action:
+                - s3:GetObject
+              Resource:
+                Fn::Join:
+                  - ""
+                  - - "arn:aws:s3:::"
+                    - Ref: WebsiteBucket
+                    - "/*"
+
+custom:
+  s3Sync:
+    - bucketName: sls-s3-portfolio-website-lfed
+      localDir: MySimplyPortfolioWebsite
