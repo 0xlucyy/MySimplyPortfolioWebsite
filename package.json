@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "deploy": "serverless deploy --aws-profile S3_portfolio_website",
-    "PoS_sls": "aws s3 cp /Users/ancientevil/0x/MySimplyPortfolioWebsite/index.html s3://sls-s3-portfolio-website-lfed/ --profile S3_portfolio_website",
-    "PoS_sls_1": "aws s3 sync /Users/ancientevil/0x/MySimplyPortfolioWebsite/static s3://sls-s3-portfolio-website-lfed/static/ --profile S3_portfolio_website"
+    "upload_index": "aws s3 cp /Users/ancientevil/0x/MySimplyPortfolioWebsite/index.html s3://luisfernando.engineer/ --profile S3_portfolio_website",
+    "upload_error": "aws s3 cp /Users/ancientevil/0x/MySimplyPortfolioWebsite/error.html s3://luisfernando.engineer/ --profile S3_portfolio_website",
+    "upload_static": "aws s3 sync /Users/ancientevil/0x/MySimplyPortfolioWebsite/static s3://luisfernando.engineer/static/ --profile S3_portfolio_website"
+
   },
   "keywords": [],
   "author": "",

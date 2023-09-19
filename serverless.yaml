@@ -13,7 +13,7 @@ resources:
     WebsiteBucket:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: sls-s3-portfolio-website-lfed
+        BucketName: luisfernando.engineer
         PublicAccessBlockConfiguration:
           BlockPublicAcls: false
           IgnorePublicAcls: false
@@ -21,6 +21,7 @@ resources:
           RestrictPublicBuckets: false
         WebsiteConfiguration:
           IndexDocument: index.html
+          ErrorDocument: error.html  # Add this line
 
     BucketPolicy:
       Type: AWS::S3::BucketPolicy
@@ -43,5 +44,5 @@ resources:
 
 custom:
   s3Sync:
-    - bucketName: sls-s3-portfolio-website-lfed
+    - bucketName: luisfernando.engineer
       localDir: MySimplyPortfolioWebsite
