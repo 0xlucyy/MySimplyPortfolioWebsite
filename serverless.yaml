@@ -21,7 +21,7 @@ resources:
           RestrictPublicBuckets: false
         WebsiteConfiguration:
           IndexDocument: index.html
-          ErrorDocument: error.html  # Add this line
+          ErrorDocument: error.html
 
     BucketPolicy:
       Type: AWS::S3::BucketPolicy
